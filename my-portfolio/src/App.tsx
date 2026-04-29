@@ -163,7 +163,7 @@ const Hero: React.FC = () => {
                             Senior Software Engineer
                         </h2>
                         <p className="text-lg text-neutral-400 mb-12 max-w-xl mx-auto lg:mx-0">
-                            Crafting scalable, high-performance systems with a passion for AI-assisted development and modern cloud architectures.
+                            Crafting scalable, high-performance systems with a passion for modern cloud architectures and innovative solutions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <motion.button onClick={scrollToContact} className="bg-white text-black font-semibold py-3 px-8 rounded-lg hover:bg-neutral-200 transition-colors" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -174,7 +174,6 @@ const Hero: React.FC = () => {
                             </motion.a>
                         </div>
                         <div className="flex justify-center lg:justify-start space-x-6 mt-12">
-                            <a href="https://github.com/HorlaRepo" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors"><Github size={24} /></a>
                             <a href="https://linkedin.com/in/francis-oladosu" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors"><Linkedin size={24} /></a>
                             <a href="mailto:meetfran6@gmail.com" className="text-neutral-400 hover:text-white transition-colors"><Mail size={24} /></a>
                         </div>
@@ -212,13 +211,13 @@ const About: React.FC = () => {
                 </motion.div>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
                     <motion.div className="lg:col-span-3 space-y-6 text-lg text-neutral-300 leading-relaxed" initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.2 }}>
-                        <p>As a Senior Software Engineer with over 7 years of experience, I specialize in building robust, scalable systems and leveraging AI to accelerate development cycles. My expertise lies in designing microservices architectures, particularly with Java/Spring Boot and modern cloud-native technologies.</p>
-                        <p>I thrive in collaborative environments, leading teams to deliver high-quality software solutions. Currently, as an Engineering Co-Founder at NexHrm, I'm architecting a cutting-edge SaaS platform from the ground up, focusing on performance, security, and scalability.</p>
+                        <p>As a Senior Software Engineer with over 8 years of experience, I specialize in building robust, scalable systems. My expertise lies in designing microservices architectures and system design, particularly with Java/Spring Boot and modern cloud-native technologies.</p>
+                        <p>I thrive in collaborative environments, leading teams to deliver high-quality software solutions. As a Senior Software Engineer at NexHrm, I architected a cutting-edge SaaS platform from the ground up, focusing on performance, security, and scalability.</p>
                         <p>I'm driven by a passion for solving complex problems and a commitment to continuous learning and improvement in the ever-evolving tech landscape.</p>
                     </motion.div>
                      <motion.div className="lg:col-span-2 grid grid-cols-2 gap-8 text-center" initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.4 }}>
                         <div>
-                            <div className="text-5xl font-bold text-white mb-2">7+</div>
+                            <div className="text-5xl font-bold text-white mb-2">8+</div>
                             <div className="text-sm text-neutral-400 uppercase tracking-wider">Years Experience</div>
                         </div>
                         <div>
@@ -226,7 +225,7 @@ const About: React.FC = () => {
                             <div className="text-sm text-neutral-400 uppercase tracking-wider">Technologies</div>
                         </div>
                         <div>
-                            <div className="text-5xl font-bold text-white mb-2">100+</div>
+                            <div className="text-5xl font-bold text-white mb-2">10+</div>
                             <div className="text-sm text-neutral-400 uppercase tracking-wider">Projects Delivered</div>
                         </div>
                         <div>
@@ -244,10 +243,10 @@ const About: React.FC = () => {
 const Skills: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
     const skills: Skill[] = [
-        { icon: Brain, title: 'AI-Assisted Development', description: 'Leveraging AI tools to enhance coding productivity and build scalable systems.', technologies: ['Claude AI', 'GitHub Copilot', 'GPT-4'] },
+        { icon: Brain, title: 'Automation & CI/CD', description: 'Streamlining development workflows with automated testing, deployment pipelines, and infrastructure as code.', technologies: ['GitHub Actions', 'Jenkins', 'Terraform', 'Ansible'] },
         { icon: Code, title: 'Programming Languages', description: 'Proficient in multiple languages for diverse development needs.', technologies: ['Java', 'TypeScript', 'Python', 'Dart'] },
         { icon: Layers, title: 'Frameworks & Libraries', description: 'Expert-level knowledge in modern frameworks for full-stack development.', technologies: ['Spring Boot', 'React', 'Angular', 'NextJS'] },
-        { icon: Cloud, title: 'Cloud & DevOps', description: 'Experienced in cloud platforms and modern DevOps practices.', technologies: ['AWS', 'GCP', 'Docker', 'Kubernetes'] },
+        { icon: Cloud, title: 'Cloud & DevOps', description: 'Experienced in cloud platforms and modern DevOps practices.', technologies: ['AWS', 'GCP', 'Azure', 'Docker', 'Kubernetes'] },
         { icon: Database, title: 'Databases', description: 'Proficient in both SQL and NoSQL databases for optimal data management.', technologies: ['PostgreSQL', 'MongoDB', 'Firebase'] },
         { icon: Shield, title: 'Security & Best Practices', description: 'Implementing robust security measures and following industry best practices.', technologies: ['OWASP', 'OAuth2', 'JWT', 'CORS'] },
     ];
@@ -284,9 +283,9 @@ const Skills: React.FC = () => {
 const Experience: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const experiences: Experience[] = [
-    { period: '2023 – Present', title: 'Engineering Co-Founder', company: 'NexHrm', location: 'Lagos, Nigeria', description: ['Designed and led microservices-based architecture for a scalable SaaS HR platform using Spring Boot and Laravel.', 'Implemented inter-service communication via REST APIs, with centralized logging and API gateway.', 'Achieved 40% reduction in response time and 25% infrastructure cost savings.'], technologies: ['Spring Boot', 'Laravel', 'Docker', 'Kubernetes', 'AWS', 'Microservices'], },
+    { period: '2023 – 2025', title: 'Senior Software Engineer', company: 'NexHrm', location: 'Lagos, Nigeria', description: ['Designed and led microservices-based architecture for a scalable SaaS HR platform using Spring Boot and Laravel.', 'Implemented inter-service communication via REST APIs, with centralized logging and API gateway.', 'Achieved 40% reduction in response time and 25% infrastructure cost savings.'], technologies: ['Spring Boot', 'Laravel', 'Docker', 'Kubernetes', 'AWS', 'Microservices'], },
     { period: '05/2022 – 08/2023', title: 'Smart Contract Developer', company: 'Cryptika', location: 'Remote', description: ['Developed and optimized smart contracts for scalable blockchain applications, ensuring high security.', 'Collaborated with cross-functional teams to deliver robust DeFi protocols and token standards.'], technologies: ['Solidity', 'Smart Contracts', 'DeFi', 'EVM', 'Blockchain'], },
-    { period: '2019 – 2023', title: 'Freelance Software Engineer', company: 'Remote', location: 'Lagos, Nigeria', description: ['Delivered enterprise-grade solutions for clients in fintech, healthcare, and logistics.', 'Engineered scalable microservices-based systems using Java, Spring Boot, and PostgreSQL.', 'Utilized AI-assisted coding tools including Claude AI to accelerate development cycles.'], technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'AWS', 'GCP', 'Claude AI'], },
+    { period: '2019 – 2023', title: 'Freelance Software Engineer', company: 'Remote', location: 'Lagos, Nigeria', description: ['Delivered enterprise-grade solutions for clients in fintech, healthcare, and logistics.', 'Engineered scalable microservices-based systems using Java, Spring Boot, and PostgreSQL.'], technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'AWS', 'GCP'], },
   ];
 
   return (
@@ -296,7 +295,7 @@ const Experience: React.FC = () => {
           <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight">Work Experience</h2>
           <div className="w-20 h-1 bg-white mx-auto mt-4 rounded-full"></div>
         </motion.div>
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-3xl mx-auto max-h-[600px] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-track-neutral-900">
           <div className="absolute left-4 top-0 h-full w-0.5 bg-neutral-800" />
           {experiences.map((exp, index) => (
             <motion.div key={index} className="relative pl-12 pb-12" initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: index * 0.2 }}>
@@ -327,9 +326,9 @@ const Experience: React.FC = () => {
 const Projects: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
     const projects: Project[] = [
-        { title: 'AI-Driven SAAS B2B Recruitment Platform', description: 'A comprehensive, multi-tenant B2B recruitment system for NexHrm.', detailDescription: 'Leveraged a suite of AI tools to accelerate the development lifecycle. Utilized advanced models like GPT-4 for initial architectural planning, employed Claude 3 Sonnet for hands-on implementation, and used Claude 3 Opus to create comprehensive technical documentation.', technologies: ['Claude AI', 'Java', 'Spring Boot', 'Microservices', 'PostgreSQL'], featured: true, githubUrl: 'https://github.com' },
-        { title: 'Enterprise Payment Gateway Platform', description: 'A secure, scalable, and multi-currency payment gateway for enterprise transactions.', detailDescription: 'Designed a distributed system using Spring Boot 3 and Java 17, following Clean Architecture and Domain-Driven Design. Implemented JWT-based authentication, HMAC-SHA256 request signing, and achieved 100% test pass rate.', technologies: ['Java 17', 'Spring Boot 3', 'PostgreSQL', 'Redis', 'PCI DSS'], featured: true, githubUrl: 'https://github.com' },
-        { title: 'NexHrm - Microservices HR Platform', description: 'A scalable HR software with a microservices architecture on AWS.', detailDescription: 'Decoupled architecture with Spring Boot for Payroll and Laravel for other HR modules. Deployed on AWS Elastic Beanstalk, RDS, and CloudFront with a React frontend.', technologies: ['AWS', 'Spring Boot', 'Laravel', 'React', 'Docker'], featured: false },
+        { title: 'NexHrm - B2B Multi-Tenant SaaS Platform', description: 'Enterprise-grade HR management system serving multiple organizations.', detailDescription: 'Architected a comprehensive B2B Multi-Tenant SaaS HR Platform with microservices architecture. Features robust modules including Employee Information Management, Payroll Processing, Performance Management, Recruitment & Onboarding, Time & Attendance tracking, and more. Built with Spring Boot and React for scalability and seamless user experience.', technologies: ['Java', 'Spring Boot', 'Microservices', 'PostgreSQL', 'React'], featured: true, liveUrl: 'https://app.nexhrm.com' },
+        { title: 'WaveSend - AI-Powered Money Transfer', description: 'Next-gen transfer platform with intelligent conversational AI.', detailDescription: 'Revolutionizing money transfers with an intelligent AI bot that understands natural language. Users can seamlessly transfer funds, schedule payments, check balances, and more through intuitive conversations. The AI assistant detects user intent, processes complex requests, and delivers instant responses—making financial transactions as simple as chatting with a friend.', technologies: ['React', 'TypeScript', 'Node.js', 'AI/NLP', 'Postgres' , 'Python', 'Firebase'], featured: true, liveUrl: 'https://69f1e82ff25a98000854501d--wavesend-app.netlify.app/' },
+        { title: 'Enterprise Payment Gateway', description: 'A secure, scalable, and multi-currency payment gateway for enterprise transactions.', detailDescription: 'Designed a distributed system using Spring Boot 3 and Java 17, following Clean Architecture and Domain-Driven Design. Implemented JWT-based authentication, HMAC-SHA256 request signing, and achieved 100% test pass rate.', technologies: ['Java 17', 'Spring Boot 3', 'PostgreSQL', 'Redis', 'PCI DSS'], featured: false },
         { title: 'Real-time Parcel Delivery App', description: 'Android application for real-time parcel tracking and delivery management.', detailDescription: 'Built with Kotlin and MVVM architecture, featuring offline-first functionality, real-time GPS tracking, and Firebase integration for notifications and analytics.', technologies: ['Kotlin', 'Android', 'MVVM', 'Firebase', 'Google Maps API'], featured: false },
     ];
     
@@ -350,8 +349,7 @@ const Projects: React.FC = () => {
                                     {project.technologies.map(tech => <span key={tech} className="bg-neutral-800 text-neutral-300 text-sm px-3 py-1 rounded-full">{tech}</span>)}
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 transition-colors flex items-center gap-2"><Github size={20} /><span>Code</span></a>}
-                                    {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 transition-colors flex items-center gap-2"><ExternalLink size={20} /><span>Live</span></a>}
+                                    {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 transition-colors flex items-center gap-2"><ExternalLink size={20} /><span>View Project</span></a>}
                                 </div>
                            </div>
                         </motion.div>
@@ -770,7 +768,7 @@ export default App;
 //         { icon: Brain, title: 'AI-Assisted Development', description: 'Leveraging AI tools to enhance coding productivity and build scalable systems.', technologies: ['Claude AI', 'GitHub Copilot', 'GPT-4'] },
 //         { icon: Code, title: 'Programming Languages', description: 'Proficient in multiple languages for diverse development needs.', technologies: ['Java', 'TypeScript', 'Python', 'Dart'] },
 //         { icon: Layers, title: 'Frameworks & Libraries', description: 'Expert-level knowledge in modern frameworks for full-stack development.', technologies: ['Spring Boot', 'React', 'Angular', 'NextJS'] },
-//         { icon: Cloud, title: 'Cloud & DevOps', description: 'Experienced in cloud platforms and modern DevOps practices.', technologies: ['AWS', 'GCP', 'Docker', 'Kubernetes'] },
+//         { icon: Cloud, title: 'Cloud & DevOps', description: 'Experienced in cloud platforms and modern DevOps practices.', technologies: ['AWS', 'GCP', 'Azure' 'Docker', 'Kubernetes'] },
 //         { icon: Database, title: 'Databases', description: 'Proficient in both SQL and NoSQL databases for optimal data management.', technologies: ['PostgreSQL', 'MongoDB', 'Firebase'] },
 //         { icon: Shield, title: 'Security & Best Practices', description: 'Implementing robust security measures and following industry best practices.', technologies: ['OWASP', 'OAuth2', 'JWT', 'CORS'] },
 //     ];
