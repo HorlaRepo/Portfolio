@@ -39,6 +39,7 @@ interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
+  status?: string;
 }
 
 // --- Header Component ---
@@ -163,7 +164,7 @@ const Hero: React.FC = () => {
                             Senior Software Engineer
                         </h2>
                         <p className="text-lg text-neutral-400 mb-12 max-w-xl mx-auto lg:mx-0">
-                            Crafting scalable, high-performance systems with a passion for modern cloud architectures and innovative solutions.
+                            Building scalable backend systems and AI-powered products — from WhatsApp ordering bots to enterprise SaaS platforms.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <motion.button onClick={scrollToContact} className="bg-white text-black font-semibold py-3 px-8 rounded-lg hover:bg-neutral-200 transition-colors" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -211,7 +212,7 @@ const About: React.FC = () => {
                 </motion.div>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
                     <motion.div className="lg:col-span-3 space-y-6 text-lg text-neutral-300 leading-relaxed" initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.2 }}>
-                        <p>As a Senior Software Engineer with over 8 years of experience, I specialize in building robust, scalable systems. My expertise lies in designing microservices architectures and system design, particularly with Java/Spring Boot and modern cloud-native technologies.</p>
+                        <p>As a Senior Software Engineer with over 8 years of experience, I specialize in building robust, scalable systems. My expertise lies in designing microservices architectures and system design, particularly with Java/Spring Boot and modern cloud-native technologies. Most recently, I've been building Ordira, a WhatsApp AI ordering assistant that uses Claude and an event-driven pipeline to automate food vendor operations end-to-end.</p>
                         <p>I thrive in collaborative environments, leading teams to deliver high-quality software solutions. As a Senior Software Engineer at NexHrm, I architected a cutting-edge SaaS platform from the ground up, focusing on performance, security, and scalability.</p>
                         <p>I'm driven by a passion for solving complex problems and a commitment to continuous learning and improvement in the ever-evolving tech landscape.</p>
                     </motion.div>
@@ -243,10 +244,10 @@ const About: React.FC = () => {
 const Skills: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
     const skills: Skill[] = [
-        { icon: Brain, title: 'Automation & CI/CD', description: 'Streamlining development workflows with automated testing, deployment pipelines, and infrastructure as code.', technologies: ['GitHub Actions', 'Jenkins', 'Terraform', 'Ansible'] },
+        { icon: Brain, title: 'AI & LLM Development', description: 'Building production AI systems with LLMs: intent classification, structured output, RAG pipelines, and conversational agents.', technologies: ['Claude AI', 'Anthropic SDK', 'pgvector', 'RAG', 'BullMQ'] },
         { icon: Code, title: 'Programming Languages', description: 'Proficient in multiple languages for diverse development needs.', technologies: ['Java', 'TypeScript', 'Python', 'Dart'] },
         { icon: Layers, title: 'Frameworks & Libraries', description: 'Expert-level knowledge in modern frameworks for full-stack development.', technologies: ['Spring Boot', 'React', 'Angular', 'NextJS'] },
-        { icon: Cloud, title: 'Cloud & DevOps', description: 'Experienced in cloud platforms and modern DevOps practices.', technologies: ['AWS', 'GCP', 'Azure', 'Docker', 'Kubernetes'] },
+        { icon: Cloud, title: 'Cloud & DevOps', description: 'Experienced in cloud platforms and modern DevOps practices.', technologies: ['AWS', 'GCP', 'Azure', 'Docker', 'Kubernetes', 'GitHub Actions', 'CI/CD'] },
         { icon: Database, title: 'Databases', description: 'Proficient in both SQL and NoSQL databases for optimal data management.', technologies: ['PostgreSQL', 'MongoDB', 'Firebase'] },
         { icon: Shield, title: 'Security & Best Practices', description: 'Implementing robust security measures and following industry best practices.', technologies: ['OWASP', 'OAuth2', 'JWT', 'CORS'] },
     ];
@@ -326,6 +327,7 @@ const Experience: React.FC = () => {
 const Projects: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
     const projects: Project[] = [
+        { title: 'Ordira — WhatsApp AI Food Ordering Platform', description: 'AI-powered ordering assistant that turns WhatsApp conversations into paid food orders.', detailDescription: 'Ordira eliminates the manual overhead of food vendors managing orders on WhatsApp. Vendors register their menu, pricing, and policies once — then an AI assistant powered by Claude (Anthropic) handles every customer conversation: answering questions, building carts, validating orders against a live menu, generating Paystack payment links, and notifying the vendor on confirmed payment. The AI never holds truth; the backend validates every price, availability check, and payment against the database. Built with NestJS, pgvector for RAG-based FAQ retrieval, BullMQ for async webhook processing, and the Meta WhatsApp Cloud API.', technologies: ['NestJS', 'TypeScript', 'Claude AI', 'Anthropic SDK', 'PostgreSQL', 'pgvector', 'BullMQ', 'Redis', 'Paystack', 'WhatsApp Cloud API', 'React', 'GCP'], featured: true, liveUrl: 'https://www.tryordira.com', status: 'In Development' },
         { title: 'NexHrm - B2B Multi-Tenant SaaS Platform', description: 'Enterprise-grade HR management system serving multiple organizations.', detailDescription: 'Architected a comprehensive B2B Multi-Tenant SaaS HR Platform with microservices architecture. Features robust modules including Employee Information Management, Payroll Processing, Performance Management, Recruitment & Onboarding, Time & Attendance tracking, and more. Built with Spring Boot and React for scalability and seamless user experience.', technologies: ['Java', 'Spring Boot', 'Microservices', 'PostgreSQL', 'React'], featured: true, liveUrl: 'https://app.nexhrm.com' },
         { title: 'WaveSend - AI-Powered Money Transfer', description: 'Next-gen transfer platform with intelligent conversational AI.', detailDescription: 'Revolutionizing money transfers with an intelligent AI bot that understands natural language. Users can seamlessly transfer funds, schedule payments, check balances, and more through intuitive conversations. The AI assistant detects user intent, processes complex requests, and delivers instant responses—making financial transactions as simple as chatting with a friend.', technologies: ['React', 'TypeScript', 'Node.js', 'AI/NLP', 'Postgres' , 'Python', 'Firebase'], featured: true, liveUrl: 'https://69f276309f505300081149aa--wavesend-app.netlify.app/' },
         { title: 'Enterprise Payment Gateway', description: 'A secure, scalable, and multi-currency payment gateway for enterprise transactions.', detailDescription: 'Designed a distributed system using Spring Boot 3 and Java 17, following Clean Architecture and Domain-Driven Design. Implemented JWT-based authentication, HMAC-SHA256 request signing, and achieved 100% test pass rate.', technologies: ['Java 17', 'Spring Boot 3', 'PostgreSQL', 'Redis', 'PCI DSS'], featured: false },
@@ -343,13 +345,26 @@ const Projects: React.FC = () => {
                     {projects.filter(p => p.featured).map((project, index) => (
                         <motion.div key={project.title} className="bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden" initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: index * 0.2 }}>
                            <div className="p-8">
-                                <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                                <h3 className="text-2xl font-bold mb-2 flex items-center gap-3 flex-wrap">
+                                    {project.title}
+                                    {project.status && (
+                                        <span className="text-xs font-semibold bg-neutral-800 text-neutral-400 border border-neutral-700 px-2 py-1 rounded-full">
+                                            {project.status}
+                                        </span>
+                                    )}
+                                </h3>
                                 <p className="text-neutral-400 mb-4">{project.detailDescription}</p>
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {project.technologies.map(tech => <span key={tech} className="bg-neutral-800 text-neutral-300 text-sm px-3 py-1 rounded-full">{tech}</span>)}
                                 </div>
                                 <div className="flex items-center gap-4">
                                     {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-300 transition-colors flex items-center gap-2"><ExternalLink size={20} /><span>View Project</span></a>}
+                                    {!project.liveUrl && project.status && (
+                                        <span className="text-neutral-500 text-sm flex items-center gap-2">
+                                            <span className="w-2 h-2 rounded-full bg-neutral-600 inline-block"></span>
+                                            {project.status}
+                                        </span>
+                                    )}
                                 </div>
                            </div>
                         </motion.div>
