@@ -241,7 +241,7 @@ const Skills: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
     const skills: Skill[] = [
         { icon: Brain, title: 'AI & LLM Development', description: 'Building production AI systems with LLMs, structured outputs, retrieval pipelines, and workflow automation.', technologies: ['Claude AI', 'Anthropic SDK', 'pgvector', 'RAG', 'BullMQ'] },
-        { icon: Code, title: 'Programming Languages', description: 'Strong across backend, frontend, and integration-heavy product work.', technologies: ['Java', 'C#', 'TypeScript', 'Python', 'SQL'] },
+        { icon: Code, title: 'Programming Languages', description: 'Strong across backend, frontend, and integration-heavy product work.', technologies: ['Java', 'C#', 'TypeScript', 'Python', 'Php'] },
         { icon: Layers, title: 'Frontend & Product Engineering', description: 'Building fast, polished product experiences for SaaS, marketplace, and commerce applications.', technologies: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'] },
         { icon: Cloud, title: 'Backend, Cloud & Delivery', description: 'Designing production systems and deploying them with modern cloud and CI/CD workflows.', technologies: ['Spring Boot', '.NET', 'NestJS', 'AWS', 'GCP', 'Vercel', 'Docker'] },
         { icon: Database, title: 'Data Platforms', description: 'Designing reliable data layers for transactional systems, dashboards, and product workflows.', technologies: ['PostgreSQL', 'Supabase', 'MongoDB', 'Redis', 'Firebase'] },
@@ -280,9 +280,9 @@ const Skills: React.FC = () => {
 const Experience: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const experiences: Experience[] = [
-    { period: '2023 – 2025', title: 'Senior Software Engineer', company: 'NexHrm', location: 'Lagos, Nigeria', description: ['Designed and led microservices-based architecture for a scalable SaaS HR platform using Spring Boot and Laravel.', 'Implemented inter-service communication via REST APIs, with centralized logging and API gateway.', 'Achieved 40% reduction in response time and 25% infrastructure cost savings.'], technologies: ['Spring Boot', 'Laravel', 'Docker', 'Kubernetes', 'AWS', 'Microservices'], },
+    { period: '2023 – 2025', title: 'Senior Software Engineer', company: 'NexHrm', location: 'Lagos, Nigeria', description: ['Designed and led microservices-based architecture for a scalable SaaS HR platform spanning Java/Spring Boot, C#/.NET, and Laravel services.', 'Implemented inter-service communication via REST APIs, with centralized logging and API gateway across business-critical modules.', 'Achieved 40% reduction in response time and 25% infrastructure cost savings.'], technologies: ['Java', 'Spring Boot', 'C#', '.NET', 'Laravel', 'Docker', 'Kubernetes', 'AWS', 'Microservices'], },
     { period: '05/2022 – 08/2023', title: 'Smart Contract Developer', company: 'Cryptika', location: 'Remote', description: ['Developed and optimized smart contracts for scalable blockchain applications, ensuring high security.', 'Collaborated with cross-functional teams to deliver robust DeFi protocols and token standards.'], technologies: ['Solidity', 'Smart Contracts', 'DeFi', 'EVM', 'Blockchain'], },
-    { period: '2019 – 2023', title: 'Freelance Software Engineer', company: 'Remote', location: 'Lagos, Nigeria', description: ['Delivered enterprise-grade solutions for clients in fintech, healthcare, and logistics.', 'Engineered scalable microservices-based systems using Java, Spring Boot, and PostgreSQL.'], technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'AWS', 'GCP'], },
+    { period: '2019 – 2023', title: 'Freelance Software Engineer', company: 'Remote', location: 'Lagos, Nigeria', description: ['Delivered enterprise-grade solutions for clients in fintech, healthcare, and logistics.', 'Engineered scalable microservices-based systems using Java, Spring Boot, C#/.NET, and PostgreSQL.'], technologies: ['Java', 'Spring Boot', 'C#', '.NET', 'PostgreSQL', 'AWS', 'GCP'], },
   ];
 
   return (
