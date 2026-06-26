@@ -241,9 +241,9 @@ const Skills: React.FC = () => {
     const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
     const skills: Skill[] = [
         { icon: Brain, title: 'AI & LLM Development', description: 'Building production AI systems with LLMs, structured outputs, retrieval pipelines, and workflow automation.', technologies: ['Claude AI', 'Anthropic SDK', 'pgvector', 'RAG', 'BullMQ'] },
-        { icon: Code, title: 'Programming Languages', description: 'Strong across backend, frontend, and integration-heavy product work.', technologies: ['Java', 'TypeScript', 'Python', 'SQL'] },
+        { icon: Code, title: 'Programming Languages', description: 'Strong across backend, frontend, and integration-heavy product work.', technologies: ['Java', 'C#', 'TypeScript', 'Python', 'SQL'] },
         { icon: Layers, title: 'Frontend & Product Engineering', description: 'Building fast, polished product experiences for SaaS, marketplace, and commerce applications.', technologies: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'] },
-        { icon: Cloud, title: 'Backend, Cloud & Delivery', description: 'Designing production systems and deploying them with modern cloud and CI/CD workflows.', technologies: ['Spring Boot', 'NestJS', 'AWS', 'GCP', 'Vercel', 'Docker'] },
+        { icon: Cloud, title: 'Backend, Cloud & Delivery', description: 'Designing production systems and deploying them with modern cloud and CI/CD workflows.', technologies: ['Spring Boot', '.NET', 'NestJS', 'AWS', 'GCP', 'Vercel', 'Docker'] },
         { icon: Database, title: 'Data Platforms', description: 'Designing reliable data layers for transactional systems, dashboards, and product workflows.', technologies: ['PostgreSQL', 'Supabase', 'MongoDB', 'Redis', 'Firebase'] },
         { icon: Shield, title: 'Payments, Auth & Security', description: 'Shipping secure product flows involving authentication, billing, and access control.', technologies: ['Stripe', 'Paystack', 'JWT', 'OAuth2', 'RBAC', 'Webhooks'] },
     ];
