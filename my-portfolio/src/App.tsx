@@ -4,11 +4,10 @@ import { useInView } from 'react-intersection-observer';
 import {
   Brain, Code, Layers, Cloud, Database, Shield,
   Home, User, Briefcase, FolderOpen, Mail, Menu, X,
-  Linkedin, Download, ExternalLink, Github
+  Linkedin, ExternalLink, Github
 } from 'lucide-react';
 import type { Variants } from 'framer-motion';
 import FrancisOlaImage from './assets/Francis-Ola.jpg';
-import FrancisOlaResume from './assets/Francis_Oladosu_Resume_T.pdf';
 
 // --- Reusable Interfaces ---
 interface Skill {
@@ -167,9 +166,6 @@ const Hero: React.FC = () => {
                             <motion.button onClick={scrollToContact} className="bg-white text-black font-semibold py-3 px-8 rounded-lg hover:bg-neutral-200 transition-colors" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 Let's Talk
                             </motion.button>
-                            <motion.a href={FrancisOlaResume} download className="border border-neutral-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-neutral-900 transition-colors flex items-center justify-center gap-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                <Download size={18} /> Resume
-                            </motion.a>
                         </div>
                         <div className="flex justify-center lg:justify-start space-x-6 mt-12">
                             <a href="https://github.com/HorlaRepo" target="_blank" rel="noopener noreferrer" aria-label="Francis Oladosu on GitHub" className="text-neutral-400 hover:text-white transition-colors"><Github size={24} /></a>
